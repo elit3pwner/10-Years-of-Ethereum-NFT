@@ -16,14 +16,14 @@ contract TestMyNFT is Test {
     }
 
     function testNFTNameIsCorrect() public {
-        assertEq(myNFT.name(), "TheseNFT");
+        assertEq(myNFT.name(), "10 Years of ETH");
     }
 
     function testMintNFT() public {
         vm.prank(bob);
-        myNFT.mintNFT("Deez");
+        myNFT.mintNFT("10 Years of ETH");
         assertEq(myNFT.balanceOf(bob), 1);
-        assertEq(myNFT.tokenURI(0), "Deez");
-        assertEq(myNFT.tokenIdToURI(0), "Deez");
+        assertEq(myNFT.tokenURI(0), "10 Years of ETH");
+        assertEq(myNFT.tokenIdToURI(0), "10 Years of ETH");
     }
 }
