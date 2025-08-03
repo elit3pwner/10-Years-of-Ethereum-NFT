@@ -4,8 +4,8 @@ pragma solidity ^0.8.28;
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {
-
     uint256 public id;
+
     constructor() ERC721("10 Years of ETH", "ETH") {
         id = 0;
     }
@@ -20,6 +20,6 @@ contract MyNFT is ERC721 {
     function mintNFT(string memory tokenURI) public {
         tokenIdToURI[id] = tokenURI;
         _safeMint(msg.sender, id, "");
-        id ++;
+        id++;
     }
 }

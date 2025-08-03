@@ -5,8 +5,7 @@ import {Script} from "../lib/forge-std/src/Script.sol";
 import {MyNFT} from "../src/MyNFT.sol";
 
 contract DeployMyNFT is Script {
-    
-    MyNFT public myNFT; 
+    MyNFT public myNFT;
 
     // function to deploy MyNFT
     function run() external {
@@ -14,5 +13,4 @@ contract DeployMyNFT is Script {
         myNFT = new MyNFT();
         vm.stopBroadcast();
     }
-
 }
